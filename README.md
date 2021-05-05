@@ -5,9 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## User Stories
 1. Users find SF voting locations
 2. Users can see upcoming SF voting 
-3. Users can see
+3. Users can select Voting location
 4. Users can select SF candidates
-5. Users can s
+5. Users can see a page with all there choices
 
 
 ## Available Scripts
