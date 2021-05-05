@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## User Stories
+1. Users find SF voting locations
+2. Users can see upcoming SF voting 
+3. Users can see candidates
+
+
 ## Available Scripts
 
 In the project directory, you can run:
