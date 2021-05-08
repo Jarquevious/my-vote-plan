@@ -1,5 +1,6 @@
 // Step1.js
 import React from "react";
+import Buttons from '../components/buttons'
 
 function Step1(props) {
   return (
@@ -8,8 +9,13 @@ function Step1(props) {
       <input name="name" value={props.getState('name', '') } onChange={props.handleChange} /> 
       <br />
       <input name="surname" value={props.getState('surname', '')} onChange={props.handleChange} />
-    </div>
+      <br />
+      <Buttons />
+      
+      </div>
+
   );
+   
 }
 
 export default Step1;
