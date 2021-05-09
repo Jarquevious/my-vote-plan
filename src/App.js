@@ -28,6 +28,13 @@ const Navigation = (props) => {
 
 
 function App() {
+
+  const config = {
+    navigation: {
+      component: Navigation, // a React component with special props provided automatically
+      location: "after" // or before
+    }
+  };
   return (
     <Router>
       <div className="App">
@@ -35,7 +42,7 @@ function App() {
           <h1>My Vote Plan</h1>
          </header>
          <div className="Steps">
-            <Steps>
+            <Steps config={config}>
               <Step component={Step1} />
               <Step component={Step2} />
               <Step component={FinalStep} />
