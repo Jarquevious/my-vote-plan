@@ -6,9 +6,9 @@ function Buttons(props) {
   return (
     <div className="buttons">
       <br />
-      <button onClick={props.prev}>Previous</button>
+      <button type="primary" onClick={props.prev}>Previous</button>
       <br />
-      <button onClick={props.next}>Next</button>
+      <button type="primary" onClick={props.next}>Next</button>
     </div>
   );
    

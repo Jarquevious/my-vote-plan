@@ -1,3 +1,4 @@
+import React from 'react'
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import { Steps, Step } from "react-step-builder";
@@ -5,6 +6,7 @@ import Step1 from "./components/step1";
 import Step2 from "./components/step2";
 import FinalStep from "./components/step3";
 import { Button, Col, Row } from "antd";
+import VotingLocation from "./components/VotingLocation"
 
 
 const Navigation = (props) => {
@@ -41,6 +43,7 @@ function App() {
         <header className="App-header">
           <h1>My Vote Plan</h1>
          </header>
+         <VotingLocation />
          <div className="Steps">
             <Steps config={config}>
               <Step component={Step1} />

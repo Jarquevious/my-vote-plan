@@ -12,7 +12,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: sans-serif;
+  text-align: center;
+  
+  margin: 0 auto;
 }
+
+button {
+  margin: 5px;
+
+}
+
 
 .Steps {
   margin: auto;
@@ -20,5 +30,4 @@
   height: 20em;
   border: 3px solid green;
   padding: 10px;
-  background-color: brown;
 }

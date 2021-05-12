@@ -9,8 +9,6 @@ function FinalStep(props) {
       <p>Surname: {props.state.surname}</p>
       <p>Email: {props.state.email}</p>
       <p>Phone: {props.state.phone}</p>
-      
-
     </div>
   );
 }
