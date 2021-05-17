@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# My Vote Plan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### The past elections showed that voting can be complicated. My Vote Plan makes it easier by allowing users to create personalize voting plans. 
 
 ## User Stories
 1. Users find SF voting locations
@@ -9,6 +9,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 4. Users can select SF candidates
 5. Users can see a page with all there choices
 
+## Tech Stack
+1. React
+2. NPM Stepper Lib
+3. Redux
+4. Google Civic API 
+5. Node 
+6. MongoDB
 
 ## Available Scripts
 
