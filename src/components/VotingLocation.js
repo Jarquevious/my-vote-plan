@@ -10,14 +10,20 @@ function VotingLocation() {
 
   // ----------------------------------------------------------------
   async function getLocationByZip() {
-    const apikey = "AIzaSyBAMzlH6VMCZpxn7UeRrrN3w5UEuzVS-SE";
-    const path = `https://www.googleapis.com/civicinfo/v2/voterinfo?key=${apikey}`;
+    console.log('hey')
+    const key = "AIzaSyCPi_BBmvysukkWehCrXv9eBlN8k2miiF4";
+    const path =  `GET https://www.googleapis.com/civicinfo/v2/voterinfo?key=${key}`;
     try {
+      console.log(path)
       const res = await fetch(path); // stop !
       const json = await res.json(); // stop !
-      console.log(json);
+      
+      console.log(json); 
+      const pollingLocation = json.pollingLocations;
+      
+      
 
-      setData(json);
+      setData({pollingLocation});
     } catch (err) {
       console.log(err.message);
     }
@@ -33,7 +39,7 @@ function VotingLocation() {
               value={zip}
               onChange={ e => setZip(e.target.value)}
             />
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </form>
           { data && data.voterinfo.map( (election) => <p>{election.name}</p>) }
       </div>
