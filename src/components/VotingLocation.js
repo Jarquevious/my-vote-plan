@@ -11,12 +11,12 @@ function VotingLocation() {
   // ----------------------------------------------------------------
   async function getLocationByZip() {
     
+    // ----------------------------------------------------------------
     const key = "AIzaSyCPi_BBmvysukkWehCrXv9eBlN8k2miiF4";
-    // const path =  `https://www.googleapis.com/civicinfo/v2/voterinfo?key=${key}`;
-    // const path = `https://www.googleapis.com/civicinfo/v2/elections?key=${key}`
     const path = `https://www.googleapis.com/civicinfo/v2/voterinfo?key=${key}&address=${zip}&electionId=2000`
+    
+    // ----------------------------------------------------------------
     try {
-      
       console.log(path)
       const res = await fetch(path); // stop !
       const json = await res.json(); // stop !
@@ -28,6 +28,8 @@ function VotingLocation() {
       console.log(err.message);
     }
   }
+
+  // ----------------------------------------------------------------
   return (
       <div className="VotingLocation">
           <h1>Voting Location</h1>
