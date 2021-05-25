@@ -4,7 +4,7 @@ import React, { useState } from "react";
 //                       Voting Location Function
 // ----------------------------------------------------------------
 
-function VotingLocation() {
+function UpComingElections() {
   const [zip, setZip] = useState("");
   const [data, setData] = useState(null);
 
@@ -31,7 +31,7 @@ function VotingLocation() {
 
   // ----------------------------------------------------------------
   return (
-      <div className="VotingLocation">
+      <div className="UpComingElections">
           <h1>Voting Location</h1>
           <form onSubmit={(e) => {  
             e.preventDefault()
@@ -47,7 +47,7 @@ function VotingLocation() {
       </div>
   )
 }
-export default VotingLocation
+export default UpComingElections
 
 
 // curl "https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyCPi_BBmvysukkWehCrXv9eBlN8k2miiF4&address=851%20california%20st.%20San%20Francisco%20CA&electionId=2021"

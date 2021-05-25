@@ -1,7 +1,10 @@
 .Step1div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: aqua;
+    align-items:flex-start;
+    justify-content: flex-start;
+}
+
+.TextBox {
+    width: 500px;
 }

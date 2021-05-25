@@ -2,11 +2,11 @@ import React from 'react'
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import { Steps, Step } from "react-step-builder";
-import Step1 from "./components/step1";
-import Step2 from "./components/step2";
-import FinalStep from "./components/step3";
+import Step1 from "./components/Step1";
+import Step2 from "./components/Step2";
+import FinalStep from "./components/Step3";
 import { Button, Col, Row } from "antd";
-import VotingLocation from "./components/VotingLocation"
+import ButtonAppBar from './components/AppBar';
 
 
 const Navigation = (props) => {
@@ -40,10 +40,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <h1>My Vote Plan</h1>
-         </header>
-         <VotingLocation />
+         </header> */}
+         <ButtonAppBar />
          <div className="Steps">
             <Steps config={config}>
               <Step component={Step1} />
@@ -51,7 +51,6 @@ function App() {
               <Step component={FinalStep} />
             </Steps>
           </div>
-      
       </div>
     </Router>
   );
