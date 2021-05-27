@@ -1,22 +1,36 @@
 // Step1.js
 import React from "react";
-import { Input } from "antd";
+import Input from '@material-ui/core/Input';
 import "./Step1.css";
-import { Card } from "antd";
+import Card from '@material-ui/core/Card';
 import Divider from "@material-ui/core/Divider";
+import { CardHeader } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
+import InputLabel from '@material-ui/core/InputLabel';
+
+
+
+
+
 
 function Step1(props) {
   return (
-    <div className="Step1div">
-      <Card title="Contact" bordered={false} className="Title">
-        <Divider variant="inset" />
+   
+      <Card bordered={false} className="Contact">
+        <CardHeader className="ContactInformation" title="Contact Information"/> 
+      
+        <Divider variant="middle" />
         <br />
         <form>
-          <label style={{ marginRight: 420 }}>First Name</label>
-          <br />
-          <Input
-            className="TextBox"
-            placeholder="David"
+          <InputLabel style={{ marginRight: 420 }}>First Name</InputLabel>
+        
+          <TextField
+          margin="dense"
+            size="small"
+            style ={{width: '87%'}}
+            label="David"
+            variant="outlined"
+            color="secondary"
             name="name"
             value={props.getState("name", "")}
             onChange={props.handleChange}
@@ -58,7 +72,7 @@ function Step1(props) {
           <br />
         </form>
       </Card>
-    </div>
+    
   );
 }
 
