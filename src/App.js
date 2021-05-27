@@ -1,33 +1,12 @@
-import React from 'react'
-import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
-import { Steps, Step } from "react-step-builder";
+import React from "react";
 import Step1 from "./components/Step1";
 import Step2 from "./components/Step2";
 import FinalStep from "./components/Step3";
-import { Button, Col, Row } from "antd";
-import ButtonAppBar from './components/AppBar';
-
-
-const Navigation = (props) => {
-  console.log({ props });
-  return (
-    <Row align="center">
-      <Col>
-        <Button type="primary" onClick={props.prev} style={{ marginRight: 10 }}>
-          Previous
-        </Button>
-      </Col>
-      <Col>
-        <Button type="primary" onClick={props.next}>
-          Next
-        </Button>
-      </Col>
-    </Row>
-  );
-};
-
-
+import ButtonAppBar from "./components/AppBar";
+import Navigation from "./components/Navigation";
+import { Steps, Step } from "react-step-builder";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
 

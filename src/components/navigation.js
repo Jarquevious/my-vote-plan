@@ -1,10 +1,12 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+
 
 const navigation = props => {
     return (
         <div> 
-            <button className="" onClick={props.prev}>Previous</button>
-            <button className="" onClick={props.next}>Next</button>
+            <Button variant="contained" color="primary" className="" onClick={props.prev}>Previous</Button>
+            <Button className="" variant="contained" color="primary" onClick={props.next}>Next</Button>
         </div>
     );
 };
