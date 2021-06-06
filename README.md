@@ -14,8 +14,9 @@
 2. NPM Stepper Lib
 3. Redux
 4. Google Civic API 
-5. Node 
-6. MongoDB
+5. NodeJS
+7. ExpressJS
+6. MySQL
 
 ## Available Scripts
 
