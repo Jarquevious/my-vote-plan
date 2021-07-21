@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 // ----------------------------------------------------------------
-//                       Voting Location Function
+//                       Current Elections
 // ----------------------------------------------------------------
 
-function UpComingElections() {
+function CurrentElections() {
   const [zip, setZip] = useState("");
   const [data, setData] = useState(null);
 
@@ -31,8 +31,8 @@ function UpComingElections() {
 
   // ----------------------------------------------------------------
   return (
-      <div className="UpComingElections">
-          <h1>Voting Location</h1>
+      <div className="CurrentElections">
+          <p>Enter zip to see current elections</p>
           <form onSubmit={(e) => {  
             e.preventDefault()
             getLocationByZip()
@@ -47,7 +47,7 @@ function UpComingElections() {
       </div>
   )
 }
-export default UpComingElections
+export default CurrentElections
 
 
 // curl "https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyCPi_BBmvysukkWehCrXv9eBlN8k2miiF4&address=851%20california%20st.%20San%20Francisco%20CA&electionId=2021"

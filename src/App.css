@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background: #b81e1e;
+  background: #f4f4f4;
+  
 }
 [data-theme="dark"] .App {
   background: #303030;
@@ -29,5 +30,5 @@ button {
   width: 40%;
   height: 20em;
   padding: 10px;
-  background-color: rgb(203, 63, 63);
+  background-color: #f4f4f4;
 }
