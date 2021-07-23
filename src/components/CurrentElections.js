@@ -5,7 +5,7 @@ import React, { useState } from "react";
 // ----------------------------------------------------------------
 
 function CurrentElections() {
-  const [zip, setZip] = useState("");
+  const [zip, setZip] = useState(30032);
   const [data, setData] = useState(null);
 
   // ----------------------------------------------------------------
@@ -17,15 +17,15 @@ function CurrentElections() {
     
     // ----------------------------------------------------------------
     try {
-      console.log(path)
+      // console.log(path)
       const res = await fetch(path); // stop !
       const json = await res.json(); // stop !
-      console.log("---json---")
-      console.log(json); 
+      // console.log("---json---")
+      // console.log(json); 
       setData(json);
     } catch (err) {
-      console.log("---error---")
-      console.log(err.message);
+      // console.log("---error---")
+      // console.log(err.message);
     }
   }
 
@@ -42,8 +42,26 @@ function CurrentElections() {
               onChange={ e => setZip(e.target.value)}
             />
             <button type="submit">Submit</button>
+
           </form>
-          { data && data.contests.map( (election) => <p>{election.office}</p>) }
+            {/* {console.log(data)} */}
+          {data && data.contests.map((election, index) => { 
+            console.log(election.candidates)
+            return (
+              <div key={index}>
+                <p>{election.office}</p> 
+                <ul>
+
+                  {/* {election.candidates.map(candidate => <li>{candidate.name}</li>)} */}
+                  {/* {if statement to to see if no candidate, then skip over it} */}
+                  {/* if election.candidates !== undefine, then map candidates */}
+                  {election.candidates && election.candidates.map((candidate, index) => {
+                    return (<li key={index}>{candidate.name}</li>)
+                  })}
+                </ul>
+              </div>
+            )
+          }) }
       </div>
   )
 }
