@@ -1,0 +1,43 @@
+.EnterZip { 
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
+.ZipButton {
+    display: flex;
+    
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.ZipButton.MuiButton-containedPrimary {
+    margin: 2em;
+}
+
+.TField {
+    width: 400px;
+    
+    
+}
+
+.card-title {
+    font-weight: bolder;
+}
+
+.card {
+    border: solid 2px; 
+    padding-right: 40px;     
+}
+
+.card-body {
+    border: solid;
+    font-size: larger;
+    display: flex;
+    text-align: flex-start;
+    
+    
+
+}
+
+ul.MuiList-root.card-body.MuiList-padding {
+    margin: 5px; 
+}

@@ -1,4 +1,14 @@
 import React, { useState } from "react";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import "./CurrentElections.css";
+import Card from "@material-ui/core/Card";
+
+
+
+
+
 
 // ----------------------------------------------------------------
 //                       Current Elections
@@ -32,37 +42,45 @@ function CurrentElections() {
   // ----------------------------------------------------------------
   return (
       <div className="CurrentElections">
-          <p>Enter zip to see current elections</p>
+          <p className="EnterZip">Enter zip to see current elections</p>
           <form onSubmit={(e) => {  
             e.preventDefault()
             getLocationByZip()
           } }>
-            <input 
+            <TextField
+              className="TField"
+              id="outlined-secondary"
+              variant="outlined"
+              outline-offset= "2px"
+              color="secondary" 
               value={zip}
               onChange={ e => setZip(e.target.value)}
             />
-            <button type="submit">Submit</button>
+            <Button className="ZipButton" variant="contained" size="medium" color="primary" type="submit">Search My Elections</Button>
 
           </form>
-            {/* {console.log(data)} */}
+          <div class="row">  {/* {console.log(data)} */}
           {data && data.contests.map((election, index) => { 
             console.log(election.candidates)
             return (
-              <div key={index}>
-                <p>{election.office}</p> 
+             
+              <div className="card" class="col-md-4 col-sm-6 col-xs-6" key={index}>
+                <p className="card-title"> <div>{election.office}</div></p> 
+                <div>
                 <ul>
 
                   {/* {election.candidates.map(candidate => <li>{candidate.name}</li>)} */}
                   {/* {if statement to to see if no candidate, then skip over it} */}
                   {/* if election.candidates !== undefine, then map candidates */}
                   {election.candidates && election.candidates.map((candidate, index) => {
-                    return (<li key={index}>{candidate.name}</li>)
+                    return (<List className="card-body" key={index}>{candidate.name}</List>)
                   })}
-                </ul>
+                </ul></div>
               </div>
+             
             )
           }) }
-      </div>
+      </div></div>
   )
 }
 export default CurrentElections
