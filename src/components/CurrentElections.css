@@ -24,20 +24,27 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.ZipButton.MuiButton
 }
 
 .card {
-    border: solid 2px; 
-    padding-right: 40px;     
+    
+    padding-right: 40px;    
+    flex-wrap: wrap;
+    padding: 1em;
+    margin: 1em;
 }
 
 .card-body {
-    border: solid;
     font-size: larger;
     display: flex;
     text-align: flex-start;
-    
-    
+    font-size: 15px;
+    padding: 1em;
 
 }
 
+.loved {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 ul.MuiList-root.card-body.MuiList-padding {
     margin: 5px; 
 }

@@ -3,7 +3,9 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import "./CurrentElections.css";
-import Card from "@material-ui/core/Card";
+// import List from '@material-ui/core/List';
+
+// import Card from "@material-ui/core/Card";
 
 
 
@@ -59,28 +61,25 @@ function CurrentElections() {
             <Button className="ZipButton" variant="contained" size="medium" color="primary" type="submit">Search My Elections</Button>
 
           </form>
-          <div class="row">  {/* {console.log(data)} */}
+            {/* {console.log(data)} */}
           {data && data.contests.map((election, index) => { 
             console.log(election.candidates)
             return (
              
-              <div className="card" class="col-md-4 col-sm-6 col-xs-6" key={index}>
+              <div className="card"  key={index}>
                 <p className="card-title"> <div>{election.office}</div></p> 
-                <div>
-                <ul>
-
-                  {/* {election.candidates.map(candidate => <li>{candidate.name}</li>)} */}
-                  {/* {if statement to to see if no candidate, then skip over it} */}
-                  {/* if election.candidates !== undefine, then map candidates */}
+                <div className="love">
+                <List className="loved">
                   {election.candidates && election.candidates.map((candidate, index) => {
-                    return (<List className="card-body" key={index}>{candidate.name}</List>)
+                    return (<li className="card-body" key={index}>{candidate.name}</li>)
                   })}
-                </ul></div>
+                </List>
+              </div>
               </div>
              
             )
           }) }
-      </div></div>
+      </div>
   )
 }
 export default CurrentElections
