@@ -7,6 +7,9 @@ import ButtonAppBar from './components/AppBar';
 import Navigation from './components/Navigation';
 import { Steps, Step } from 'react-step-builder';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducers from './reducers'
 
  function App() {
 
@@ -17,13 +20,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
     }
   };
   return (
-    <Router>
+    <Provider store={store}>
       <div className="App">
-        {/* <header className="App-header">
-          <h1>My Vote Plan</h1>
-         </header> */}
-         <ButtonAppBar />
-         <div className="Steps">
+        <Password />
+        <ButtonAppBar />
+        <div className="Steps">
             <Steps config={config}>
               <Step component={Step1} />
               <Step component={Step2} />
@@ -31,7 +32,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
             </Steps>
           </div>
       </div>
-    </Router>
+    </Provider>
   );
 }
 

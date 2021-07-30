@@ -7,11 +7,6 @@ import "./CurrentElections.css";
 
 // import Card from "@material-ui/core/Card";
 
-
-
-
-
-
 // ----------------------------------------------------------------
 //                       Current Elections
 // ----------------------------------------------------------------
