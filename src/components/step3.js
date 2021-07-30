@@ -1,14 +1,14 @@
 // FinalStep.js
-import React from "react";
-
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
 function FinalStep(props) {
+  const savedElections = useSelector((state) => {
+    return state.elections
+   })
   return (
     <div>
-      <p>Name: {props.state.name}</p>
-      <p>Surname: {props.state.surname}</p>
-      <p>Email: {props.state.email}</p>
-      <p>Phone: {props.state.phone}</p>
+      { savedElections.map((election) => <p>{election}</p> )}
     </div>
   );
 }

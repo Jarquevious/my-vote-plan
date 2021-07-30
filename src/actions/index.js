@@ -3,7 +3,7 @@
 export const ADD_PASSWORD = "ADD_PASSWORD"
 export const EDIT_PASSWORD = "EDIT_PASSWORD"
 export const DELETE_PASSWORD = "DELETE_PASSWORD"
-
+export const ADD_CANDIDATE = 'ADD_CANDIDATE'
 
 export const addPassword = (name, password) => {
     return {
@@ -12,16 +12,23 @@ export const addPassword = (name, password) => {
     }
   }
   
-  export const deletePassword = (index) => {
+export const deletePassword = (index) => {
     return {
       type: DELETE_PASSWORD,
       payload: { index }
     }
   }
   
-  export const editPassword = (index, name, password) => {
+export const editPassword = (index, name, password) => {
     return {
       type: EDIT_PASSWORD,
       payload: { index, name, password }
+    }
+  }
+
+  export const addCandidate = (name) => {
+    return {
+      type: ADD_CANDIDATE,
+      payload: { name }
     }
   }

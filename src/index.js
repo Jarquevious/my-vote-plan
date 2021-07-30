@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider, useSelector, useDispatch } from 'react-redux'
-import store from './store'
+import { Provider } from 'react-redux'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createStore} from 'redux'
+import rootReducer from './reducers'
+
+const store = createStore(rootReducer)
+
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(
